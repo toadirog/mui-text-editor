@@ -49,6 +49,7 @@ export function validateUrl(url: string): boolean {
 
 const theme = {
   paragraph: 'editor-paragraph',
+  image: 'oloolol',
   text: {
     bold: 'text-bold',
     italic: 'text-italic',
