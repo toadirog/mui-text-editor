@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import { $isListNode } from '@lexical/list';
-import IconButton from '@mui/material/IconButton';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import {
@@ -10,6 +9,7 @@ import {
   REMOVE_LIST_COMMAND,
 } from '@lexical/list';
 import { $getSelection, $isRangeSelection } from 'lexical';
+import { SquareIconButton } from './SquareIconButton';
 
 export default function ListActions(): JSX.Element {
   const [editor] = useLexicalComposerContext();
@@ -65,20 +65,20 @@ export default function ListActions(): JSX.Element {
 
   return (
     <div className="toolbar">
-      <IconButton
-        color={listType === 'bullet' ? 'primary' : 'default'}
+      <SquareIconButton
+        $active={listType === 'bullet'}
         onClick={() => toggleList('bullet')}
         aria-label="format bulleted list"
       >
         <FormatListBulletedIcon />
-      </IconButton>
-      <IconButton
-        color={listType === 'number' ? 'primary' : 'default'}
+      </SquareIconButton>
+      <SquareIconButton
+        $active={listType === 'number'}
         onClick={() => toggleList('number')}
         aria-label="format numbered list"
       >
         <FormatListNumberedIcon />
-      </IconButton>
+      </SquareIconButton>
     </div>
   );
 }

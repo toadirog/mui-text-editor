@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { TextFormatSelect } from './TextFormatSelect';
 import { CustomTextActions } from './CustomTextActions';
-import ImageToolbar from './ImageToolbar';
+import ImageButton from './ImageButton';
 import ListActions from './ListActions';
+import Divider from '@mui/material/Divider';
+import LinkButton from './LinkButton';
 
 const ToolbarContainer = styled.div`
   display: flex;
@@ -19,8 +21,11 @@ export const Toolbar = () => {
     <ToolbarContainer>
       <TextFormatSelect />
       <CustomTextActions />
+      <Divider orientation="vertical" variant="middle" flexItem />
       <ListActions />
-      <ImageToolbar />
+      <Divider orientation="vertical" variant="middle" flexItem />
+      <LinkButton />
+      <ImageButton />
     </ToolbarContainer>
   );
 };
