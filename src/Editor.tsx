@@ -24,6 +24,7 @@ import { ImageNode } from './nodes/ImageNode';
 import { Toolbar } from './components/Toolbar';
 import { EditorContainer } from './components/EditorContainer';
 import { Placeholder } from './components/Placeholder';
+import LinkPopoverPlugin from './plugins/LinkPopoverPlugin';
 
 const URL_REGEX =
   /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/;
@@ -92,6 +93,7 @@ function Editor() {
         <ListPlugin />
         <OnChangePlugin />
         <ImagesPlugin />
+        <LinkPopoverPlugin />
       </LexicalComposer>
     </EditorContainer>
   );
