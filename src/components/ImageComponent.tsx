@@ -139,15 +139,6 @@ export default function ImageComponent({
     }
   }, [triggerDownload]);
 
-  // const handleDownloadImage = () => {
-  //   const link = document.createElement('a');
-  //   link.href = src; // The src prop should be the URL of the image
-  //   link.download = 'downloadedImage'; // The default filename for the download
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
-
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
 
